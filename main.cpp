@@ -1,3 +1,4 @@
+#include "GameManager.h"
 #include <Novice.h>
 
 const char kWindowTitle[] = "GC2D_02_アリミズ_ユウタ_タイトル";
@@ -24,6 +25,17 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓更新処理ここから
 		///
+		// 生成
+		GameManager* gameManager = new GameManager();
+
+		// ゲーム実行
+		gameManager->Run();
+
+		// 解放
+		delete gameManager;
+
+		// ライブラリの終了
+		Novice::Finalize();
 
 		///
 		/// ↑更新処理ここまで
