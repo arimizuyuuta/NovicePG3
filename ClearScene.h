@@ -2,7 +2,8 @@
 
 #include "IScene.h"
 
-class TitleScene : public IScene {
+// クリアシーン
+class ClearScene : public IScene {
 
 public:
 	void Initialize() override;
